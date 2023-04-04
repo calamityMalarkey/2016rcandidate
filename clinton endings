@@ -1,0 +1,359 @@
+        //out = "win", "loss", or "tie" for your candidate
+        //totv = total votes in entire election
+        //aa = all final overall results data
+        //quickstats = relevant data on candidate performance (format: your candidate's electoral vote count, your candidate's popular vote share, your candidate's raw vote total)
+//2016 ending code Clinton and Rubio
+orderID = [aa[0].candidate, aa[1].candidate, aa[2].candidate, aa[3].candidate];
+var playerEV = quickstats[0];
+var playerID = 0;
+var opposite = 0;
+playerlost = true;
+vptoptwo = false;
+var playerout = false;
+var oppositeout = false;
+housewon = false;
+senatewon = false;
+senatetie = false;
+bernie = 203;
+hillary = 201;
+
+if ($("#music_player")[0]) {
+      $("#music_player")[0].remove();
+    }
+
+
+//house win code
+if (orderID[3] == bernie && orderID[0] == hillary) {
+if (aa[3].popular_votes += aa[0].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+if (orderID[3] == bernie && orderID[1] == hillary) {
+if (aa[3].popular_votes += aa[1].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+if (orderID[3] == bernie && orderID[2] == hillary) {
+if (aa[3].popular_votes += aa[2].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+} 
+if (orderID[2] == bernie && orderID[0] == hillary) {
+if (aa[2].popular_votes += aa[0].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+} 
+if (orderID[2] == bernie && orderID[1] == hillary) {
+if (aa[2].popular_votes += aa[1].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+} 
+if (orderID[2] == bernie && orderID[3] == hillary) {
+if (aa[2].popular_votes += aa[3].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}    
+if (orderID[1] == bernie && orderID[0] == hillary) {
+if (aa[1].popular_votes += aa[0].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+if (orderID[1] == bernie && orderID[2] == hillary) {
+if (aa[1].popular_votes += aa[2].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+if (orderID[1] == bernie && orderID[3] == hillary) {
+if (aa[1].popular_votes += aa[3].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+if (orderID[0] == bernie && orderID[3] == hillary) {
+if (aa[0].popular_votes += aa[3].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+if (orderID[0] == bernie && orderID[2] == hillary) {
+if (aa[0].popular_votes += aa[2].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+if (orderID[0] == bernie && orderID[1] == hillary) {
+if (aa[0].popular_votes += aa[1].popular_votes >= 70384677) {
+housewon = true;
+}
+else housewon = false;
+}
+
+
+//senate win code
+if (orderID[3] == bernie && orderID[0] == hillary) {
+if (aa[3].popular_votes += aa[0].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+if (orderID[3] == bernie && orderID[1] == hillary) {
+if (aa[3].popular_votes += aa[1].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+if (orderID[3] == bernie && orderID[2] == hillary) {
+if (aa[3].popular_votes += aa[2].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+} 
+if (orderID[2] == bernie && orderID[0] == hillary) {
+if (aa[2].popular_votes += aa[0].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+} 
+if (orderID[2] == bernie && orderID[1] == hillary) {
+if (aa[2].popular_votes += aa[1].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+} 
+if (orderID[2] == bernie && orderID[3] == hillary) {
+if (aa[2].popular_votes += aa[3].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}    
+if (orderID[1] == bernie && orderID[0] == hillary) {
+if (aa[1].popular_votes += aa[0].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+if (orderID[1] == bernie && orderID[2] == hillary) {
+if (aa[1].popular_votes += aa[2].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+if (orderID[1] == bernie && orderID[3] == hillary) {
+if (aa[1].popular_votes += aa[3].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+if (orderID[0] == bernie && orderID[3] == hillary) {
+if (aa[0].popular_votes += aa[3].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+if (orderID[0] == bernie && orderID[2] == hillary) {
+if (aa[0].popular_votes += aa[2].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+if (orderID[0] == bernie && orderID[1] == hillary) {
+if (aa[0].popular_votes += aa[1].popular_votes >= 69017984) {
+senatewon = true;
+}
+else senatewon = false;
+}
+
+
+//senate tie code
+if (orderID[3] == bernie && orderID[0] == hillary) {
+if (aa[3].popular_votes += aa[0].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+if (orderID[3] == bernie && orderID[1] == hillary) {
+if (aa[3].popular_votes += aa[1].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+if (orderID[3] == bernie && orderID[2] == hillary) {
+if (aa[3].popular_votes += aa[2].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+} 
+if (orderID[2] == bernie && orderID[0] == hillary) {
+if (aa[2].popular_votes += aa[0].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+} 
+if (orderID[2] == bernie && orderID[1] == hillary) {
+if (aa[2].popular_votes += aa[1].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+} 
+if (orderID[2] == bernie && orderID[3] == hillary) {
+if (aa[2].popular_votes += aa[3].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}    
+if (orderID[1] == bernie && orderID[0] == hillary) {
+if (aa[1].popular_votes += aa[0].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+if (orderID[1] == bernie && orderID[2] == hillary) {
+if (aa[1].popular_votes += aa[2].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+if (orderID[1] == bernie && orderID[3] == hillary) {
+if (aa[1].popular_votes += aa[3].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+if (orderID[0] == bernie && orderID[3] == hillary) {
+if (aa[0].popular_votes += aa[3].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+if (orderID[0] == bernie && orderID[2] == hillary) {
+if (aa[0].popular_votes += aa[2].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+if (orderID[0] == bernie && orderID[1] == hillary) {
+if (aa[0].popular_votes += aa[1].popular_votes >= 67651291) {
+senatetie = true;
+}
+else senatetie = false;
+}
+    
+
+if (playerEV >= 270) {
+    playerlost = false
+}
+if (aa[0].electoral_votes >= 270 && quickstats[0] >= 350 && housewon == true) {
+      return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>And as hard as it might be to imagine, your daughter will grow up and become the president of the United States.</h3><span id='ending0' style='display: initial;'><p>As you utter that line in your victory speech, in front of a packed Jacob K. Javits Convention Center, you can't help but smile: you finally did it. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In a landslide, no less, nearly sweeping the country, even as Bernie became the first left-wing third-party candidate since 1924 to win a state. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<br><br><button onclick='nexte0()'>Next</button></p></span><span id='ending1' style='display: none;'><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. Democrats have a commanding mandate, taking the Senate and (narrowly) taking the house, likely due to Trump urging his supporters to vote third party downballot. There's plenty of legislation you could persue in the future, but whether you tack more to the left or center depends on you. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January. Bright times are ahead.<br><br><button onclick='backe0()'>Back</button>&nbsp;&nbsp;<button onclick='nexte1()'>Next</button></p></span><span id='ending2' style='display: none;'><p>If no major crises rock the country in the next four years, there's no reason you couldn't be re-elected for another term. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've easily beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.</i><br><br><button onclick='backe1()'>Back</button>&nbsp;&nbsp;";
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 350 && senatewon == true) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>And as hard as it might be to imagine, your daughter will grow up and become the president of the United States.</h3><p>As you utter that line in your victory speech, in front of a packed Jacob K. Javits Convention Center, you can't help but smile: you finally did it. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In a landslide, no less, nearly sweeping the country, even as Bernie became the first left-wing third-party candidate since 1924 to win a state. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. With a fairly mixed mandate, Democrats taking the Senate while losing the house, likely due to Trump urging his supporters to vote third party downballot, there's not much legislation you can pass in the future without significantly working with the other side, but you will have free reign over judges. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January, and Ruth Bader Ginsburg reportedly plans on retiring and allowing you to appoint her replacment. You'll likely have a tougher road to travel for your first two years in Washington than others, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, there's no reason you couldn't be re-elected for another term. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've easily beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.";
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 350 && senatetie == true) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>And as hard as it might be to imagine, your daughter will grow up and become the president of the United States.</h3><p>As you utter that line in your victory speech, in front of a packed Jacob K. Javits Convention Center, you can't help but smile: you finally did it. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In a landslide, no less, nearly sweeping the country, even as Bernie became the first left-wing third-party candidate since 1924 to win a state. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. You do have a fairly mixed mandate: with close victories in Pennsylvania and Missouri, Democrats have managed to take the Senate to a tie, with Vice President Kaine acting as a tie-breaking vote. There's not much legislation you can probably pass in the future without significantly working with the other side, but you do have control over judges. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January, and Ruth Bader Ginsburg reportedly plans on retiring and allowing you to appoint her replacment. You'll likely have a tougher road to travel for your first two years in Washington than others, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, there's no reason you couldn't be re-elected for another term. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've easily beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.";
+}else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 350 && senatetie == false) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>And as hard as it might be to imagine, your daughter will grow up and become the president of the United States.</h3><p>As you utter that line in your victory speech, in front of a packed Jacob K. Javits Convention Center, you can't help but smile: you finally did it. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In a landslide, no less, nearly sweeping the country, even as Bernie became the first left-wing third-party candidate since 1924 to win a state. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. Unfortunately, in victory, you failed to help Democrats flip either side of Congress, leaving Mitch McConnell and Paul Ryan in control of the capitol. Legislation is off the table, and there's already rumors swirling of McConnell considering to continue holding up the nomination of Merrick Garland for the Supreme Court, and perhaps even some cabinet confirmations. It seems you'll have a tough road in Washington ahead of you, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, there's no reason you couldn't be re-elected for another term. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've easily beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.";
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 300 && housewon == win) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>As our country has proven once again, when there are no ceilings, the sky's the limit.</h3><p>In front of a crowd of your supporters in New York, you're met with cheers as you say that last line. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In what was, at points, predicted by pundits to be the first election in centuries to go to the house, you cleared 270 electoral votes and still won respectfully. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. Democrats have a commanding mandate, taking the Senate and (narrowly) taking the house, likely due to Trump urging his supporters to vote third party downballot. There's plenty of legislation you could persue in the future, but whether you tack more to the left or center depends on you. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January. Bright times are ahead.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect."; 
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 300 && senatewon == true) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>As our country has proven once again, when there are no ceilings, the sky's the limit.</h3><p>In front of a crowd of your supporters in New York, you're met with cheers as you say that last line. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In what was, at points, predicted by pundits to be the first election in centuries to go to the house, you cleared 270 electoral votes and still won respectfully. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. With a fairly mixed mandate, Democrats taking the Senate while losing the house, likely due to Trump urging his supporters to vote third party downballot, there's not much legislation you can pass in the future without significantly working with the other side, but you will have free reign over judges. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January, and Ruth Bader Ginsburg reportedly plans on retiring and allowing you to appoint her replacment. You'll likely have a tougher road to travel for your first two years in Washington than others, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect."; 
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 300 && senatetie == true) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>As our country has proven once again, when there are no ceilings, the sky's the limit.</h3><p>In front of a crowd of your supporters in New York, you're met with cheers as you say that last line. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In what was, at points, predicted by pundits to be the first election in centuries to go to the house, you cleared 270 electoral votes and still won respectfully. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. With a fairly mixed mandate, Democrats narrowly the Senate in a tie with Kaine acting as the tiebreaking vote, while losing the house, there's not much legislation you can pass in the future without significantly working with the other side. One thing you'll have control over is judges. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January, and Ruth Bader Ginsburg apparently plans on retiring and allowing you to appoint her replacment. You'll likely have a tougher road to travel for your first two years in Washington than others, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect."; 
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 300 && senatetie == false) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>As our country has proven once again, when there are no ceilings, the sky's the limit.</h3><p>In front of a crowd of your supporters in New York, you're met with cheers as you say that last line. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. In what was, at points, predicted by pundits to be the first election in centuries to go to the house, you cleared 270 electoral votes and still won respectfully. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. Unfortunately, in victory, you failed to help Democrats flip either side of Congress, leaving Mitch McConnell and Paul Ryan in control of the capitol. Legislation is off the table, and there's already rumors swirling of McConnell considering to continue holding up the nomination of Merrick Garland for the Supreme Court. It seems you'll have a tough road in Washington ahead of you, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect."; 
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 269 && housewon == true) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>You renewed our democracy. And because of the honor you have given me, you changed its face forever.</h3><p>A bit of a filler line, maybe, but your supporters at your victory speech are happy enough about the stress of election night being over that they cheer regardless. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. Pundits predicted that the election could go to the house, and that was nearly fufilled, but you managed to clear 270 in the end. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. In contrast to your narrow win, Democrats have a commanding mandate, taking the Senate and (narrowly) taking the house, likely due to Trump urging his supporters to vote third party downballot, while Bernie declined to do the same. There's plenty of legislation you could persue in the future, but whether you tack more to the left or center depends on you. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January. Bright times are ahead.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.";
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 269 && senatewon == true) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>You renewed our democracy. And because of the honor you have given me, you changed its face forever.</h3><p>A bit of a filler line, maybe, but your supporters at your victory speech are happy enough about the stress of election night being over that they cheer regardless. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. Pundits predicted that the election could go to the house, and that was nearly fufilled, but you managed to clear 270 in the end. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. With a fairly mixed mandate, Democrats taking the Senate while losing the house, likely due to Trump urging his supporters to vote third party downballot, there's not much legislation you can pass in the future without significantly working with the other side, but you will have free reign over judges. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January, and Ruth Bader Ginsburg reportedly plans on retiring and allowing you to appoint her replacment. You'll likely have a tougher road to travel for your first two years in Washington than others, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.";
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 269 && senatetie == true) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>You renewed our democracy. And because of the honor you have given me, you changed its face forever.</h3><p>A bit of a filler line, maybe, but your supporters at your victory speech are happy enough about the stress of election night being over that they cheer regardless. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. Pundits predicted that the election could go to the house, and that was nearly fufilled, but you managed to clear 270 in the end. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. You do have a fairly mixed mandate: with close victories in Pennsylvania and Missouri, Democrats have managed to take the Senate to a tie, with Vice President Kaine acting as a tie-breaking vote. There's not much legislation you can probably pass in the future without significantly working with the other side, but you do have control over judges. Mitch McConnell is already reportedly considering putting forward a vote on Merrick Garland before Chuck Schumer takes his job come January, and Ruth Bader Ginsburg reportedly plans on retiring and allowing you to appoint her replacment. You'll likely have a tougher road to travel for your first two years in Washington than others, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.";
+} else if (aa[0].electoral_votes >= 270 && quickstats[0] >= 269 && senatetie == false) {
+    return "<audio loop='false' autoplay='true' src='https://cdn.discordapp.com/attachments/954783319046889505/1085329915051786341/Rachel_Platten_-_Fight_Song_Lyrics_getmp3.pro.mp3' style='display:none;'></audio><h3>You renewed our democracy. And because of the honor you have given me, you changed its face forever.</h3><p>A bit of a filler line, maybe, but your supporters at your victory speech are happy enough about the stress of election night being over that they cheer regardless. After decades of attacks, after losing the primary in 2008, after narrowly winning over Bernie just a few months ago, and after he declared his general election candidacy, you still won in the end. Pundits predicted that the election could go to the house, and that was nearly fufilled, but you managed to clear 270 in the end. Sanders, Trump, and Rubio may have all won a few states, but you won where it counted. In one of the more chaotic elections in Americas history, you came out on top, and will become the first female President of the United States.<p><p>As you field calls of concession from Bernie and Marco (Trump refrains from doing the same, issueing a non-concession declaring that despite <em>'UNIVERSAL Democrat-Republican FRAUD'</em> his <em>'movement WILL CONTINUE for 4-years of CROOKED HILLARY,'</em> perhaps planning for another run in 2020,) your staff are already putting together your cabinet, and a meeting with Obama in the White House is already scheduled for next week. Unfortunately, in victory, you failed to help Democrats flip either side of Congress, leaving Mitch McConnell and Paul Ryan in control of the capitol. Legislation is off the table, and there's already rumors swirling of McConnell considering to continue holding up the nomination of Merrick Garland for the Supreme Court. It seems you'll have a tough road in Washington ahead of you, but you're sure you can handle it.<p><p>If no major crises rock the country in the next four years, your path to re-election for another term remains open. You may have a rocky relationship with the left to look forward to during your time in office, but whose fault is that but Bernie's? You've beaten Rubio, and knives are out in the Republican Party as they allege Trump worked as a spoiler for yourself. Either way, you've won, and now there's work to be done. Congratulations, Madame President-Elect.";
+} else if (aa[0].electoral_votes >= 270 && playerlost == true) {
+    return "<h3>someone else won.”</h3><p>lmfao.";
+} else {
+    for (let i = 0; i <= 3; i++) {
+        if (playerEV == aa[i].electoral_votes) {
+            playerID = aa[i].candidate;
+            break;
+        }
+    }
+    if (playerID == 200) {
+        opposite = 202;
+    } else if (playerID == 202) {
+        opposite = 200;
+    } else if (playerID == 201) {
+        opposite = 203;
+    } else if (playerID == 203) {
+        opposite = 201;
+    } else {
+        return "something broke at opposite chooser.";
+    }
+    if (orderID[3] == opposite) {
+        oppositeout = true;
+    }
+    if (orderID[3] == playerID) {
+        playerout = true;
+    }
+    if (orderID[2] !== playerID) {
+        vptoptwo = true;
+    }
+    
+    if (playerID == 200) {
+        if (playerout == true) {
+            return"<h3>“Sorry, you’ve lost the 2016 election.”</h3><p>The election is going to the house of representatives, and the house only votes on the top three candidates, so you and your running mate will be left out. It seems Donald Trump will be the next president, as the house will split what little left-wing votes it has between Clinton and Sanders, giving it to Trump.<p><p>Your career in politics and the presidency is most certainly not over, as you still have your senate seat, and are popular. In addition, due to the strange situation of this election, you are more poised than anyone else to run again in 4 years with less opposition than most. In any case, you can at least concede defeat knowing you prevented Clinton or Sanders from becoming president. Compared to those two, Trump doesn’t seem so bad..."; 
+        } else if (oppositeout == true) {
+            if (vptoptwo == true) {
+                return "<h3>“Congratulations! You’re on track to win the 2016 election.”</h3><p>The election is going to the house of representatives, and the house only votes on the top three candidates, so your right-wing opponent Donald Trump will be left out. This means virtually all Republicans will vote for you, and it’s likely no strong defence will be mounted by the democrats to prevent that.<p><p>In addition, you made the top two as well, and that means your running mate will get selected by the Republican senate to join you in governance.<p><p> You’ll hopefully be able to repeal Obamacare and replace it with something the free market likes more, as well as enact more tax cuts. If all goes well, you could be the fourth president in a row to be re-elected. Let’s hope nothing bad happens during the house of representatives process, or you just might become Andrew Jackson 2.0.";
+            } else {
+                return"<h3>“Congratulations! You’re on track to win the 2016 election.”</h3><p>The election is going to the house of representatives, and the house only votes on the top three candidates, so your right-wing opponent Donald Trump will be left out. This means virtually all Republicans will vote for you, and it’s likely no strong defence will be mounted by the democrats to prevent that.<p><p> Unfortunately, you didn’t make the top three, as Clinton and Sanders were above you, so your running mate will not be joining you in the white house. Hopefully, the votes in the senate do not come down to 50/50 splits.<p><p> You’ll hopefully be able to repeal Obamacare and replace it with something the free market likes more, as well as enact more tax cuts. If all goes well, you could be the fourth president in a row to be re-elected. Let’s hope nothing bad happens during the house of representatives process, or you just might become Andrew Jackson 2.0.";
+            }
+        } else {
+            if (vptoptwo == true) {
+                if (orderID[3] == 203) {
+                    return"<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. you have made the top three, but so has Trump. On one hand, if all Republicans congregate around you, you might be able to pull off a victory. However, Trump’s influence on the house and political landscape is undeniable, and he just might siphon enough votes away to give it to Clinton.<p><p>In a bizarre twist, however, since you placed in the top two, your running mate will ascend to the vice presidency, without you!p><p>Your career in politics and the presidency is most certainly not over, as you still have your senate seat, and are popular. In addition, due to the strange situation of this election, you are more poised than anyone else to run again in 4 years with less opposition than most. Republicans will immediately start attacking Trump for “spoiling” the election, but with two left-wing candidates in the race as well, it’s nearly impossible to conclusively determine who caused what.";
+                } else {
+                    return "<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. you have made the top three, but so has Trump. On one hand, if all Republicans congregate around you, you might be able to pull off a victory. However, Trump’s influence on the house and political landscape is undeniable, and he just might siphon enough votes away to give it to Sanders. He will face his own opposition in the house vote, possibly not receiving some moderate democrat votes, so who knows at this point.<p><p>In a bizarre twist, however, since you placed in the top two, your running mate will ascend to the vice presidency, without you!<p><p>Your career in politics and the presidency is most certainly not over, as you still have your senate seat, and are popular. In addition, due to the strange situation of this election, you are more poised than anyone else to run again in 4 years with less opposition than most. Republicans will immediately start attacking Trump for “spoiling” the election, but with two left-wing candidates in the race as well, it’s nearly impossible to conclusively determine who caused what.";
+                }
+            } else 
+            if (orderID[3] == 203) {
+                return "<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. You have made the top three, but so has Trump. On one hand, if all Republicans congregate around you, you might be able to pull off a victory. However, Trump’s influence on the house and political landscape is undeniable, and he just might siphon enough votes away to give it to Clinton. <p><p>Your career in politics and the presidency is most certainly not over, as you still have your senate seat, and are popular. In addition, due to the strange situation of this election, you are more poised than anyone else to run again in 4 years with less opposition than most. Republicans will immediately start attacking Trump for “spoiling” the election, but with two left-wing candidates in the race as well, it’s nearly impossible to conclusively determine who caused what.";
+            } else {
+                return "<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. You have made the top three, but so has Trump. On one hand, if all Republicans congregate around you, you might be able to pull off a victory. However, Trump’s influence on the house and political landscape is undeniable, and he just might siphon enough votes away to give it to Sanders. He will face his own opposition in the house vote, possibly not receiving some moderate democrat votes, so who knows at this point.<p><p>Your career in politics and the presidency is most certainly not over, as you still have your senate seat, and are popular. In addition, due to the strange situation of this election, you are more poised than anyone else to run again in 4 years with less opposition than most. Republicans will immediately start attacking Trump for 'spoiling' the election, but with two left-wing candidates in the race as well, it’s nearly impossible to conclusively determine who caused what.";
+            }
+        }
+    }
+        else if (playerID == 201) {
+        if (playerout == true) {
+            return"<h3>Secretary? He won California.”</h3><p>As your Vice Chair, Huma Abedin, tells you the news (as always, you aren’t watching the results as they come in: you prefer to be in another room as staff periodically come in to give you news,) you can’t help but think: in a way, this is far worse than simply losing to Rubio. If Rubio won, you wouldn’t have to sit watching Bernie Sanders declare that the establishment was sent a strong message, that his revolution continues, and that he hopes the Democratic Party can unite behind him to prevent a Rubio victory, after everything he did. You wouldn’t have to tell your staffers that no, you won’t be calling Bernie to concede. Not tonight. You wouldn’t have to hear over and over and over from every pundit that Americans ranked you dead last, that maybe they <em>just weren’t ready for a female President.</em><p><p> You wouldn’t have had to listen as President Obama tells members of the press that the President <em>will watch it unfold just as the American public will,</em> while hearing rumors of him reluctantly trying to unite Democrats behind Bernie and Tulsi. You wouldn’t have to watch as Joe Biden says that it’s <em>outrageous that any of us Democrats would stand by and help elect someone who would undue everything we have achieved,</em>< a later walked-back gaffe that you presume was directed at you. The worst part is that you’re out of the loop. Bernie doesn’t even call you himself to ask for your endorsement, perhaps expecting that you’d make the jump. You won’t, not after this. A few ten thousand votes in a few states change hands and you wouldn’t have been considered a failure. It’s a very bitter pill to swallow.";
+        } else if (oppositeout == true) {
+            if (vptoptwo == true) {
+                return "<h3>It’s not going to happen tonight.”</h3><p>Like always, you aren’t watching the results as they come in. Rather, as the night went on, you’ve been sitting in another room as staffers give you updates throughout the night. Now, as a stained Huma Abedin (Vice Chair of your campaign) walks into the room, you could tell that your suspicions were correct before she gave you the news. Your campaign for the Presidency isn’t over for another two months, with the top three candidates from the general election proceeding to the next stage of the race: the contingent election.</p> If things had to go to a contingent election, you suppose, this was the best lineup of candidates you could hope for. With Bernie safely out of the race (you couldn’t help but smile when he called you to concede, only saying that you looked forward to his endorsement for the house election in January,) you’ll almost certainly have an undivided Democratic caucus behind you going into the vote.</p> Unfortunately, Republicans retained a majority in the House, and control a clear majority of state delegations, which is what actually elects the President in the contingent election. Barring an exodus of Republicans to Trump (not something to write off!), Marco Rubio will become the next President of the United States. </p> Obviously, your campaign will try its best going into January, but be wary of the facts. Your best hope is that if the aforementioned Trump exodus comes to fruition, the house fails to elect a speaker, punting things to the Senate. This certainly has the potential to get messy. </p> As for the Vice Presidency, it’s just as much of a mess as the house. With victories in Pennsylvania and Missouri, Democrats have managed to take the Senate to a tie. If you had won outright, than this would’ve given control of the Senate to Democrats, with Vice President Kaine becoming the tie-breaking vote. That didn’t happen. Now, the Senate is supposed to elect the Vice President, and that entire process will likely become legal headache. Technically, on the day of the contingent election, Democrats will have a majority in the chamber, with Vice President Biden acting as the tie-breaking vote. But Republicans contend that Biden, not being a Senator, shouldn’t get to vote in a contingent election, noting that the constitution specifies a “majority of the whole number” of Senators is needed to elect a Vice President. Furthermore, they say that Kaine, being a Senator, shouldn’t be allowed to vote for himself in a contingent election. This all could delay the election of the Vice President for quite a while. If the house fails to come to a decision come Inauguration Day, House Speaker Paul Ryan would become President. Only one person wants that. </p> For now, start reaching out to Pelosi, and perhaps start assembling your cabinet</p>";
+            } else {
+                return  "<h3>“Congratulations! You’re on track to win the 2016 election and become the first female president.”</h3><p>The election is going to the house of representatives, and the house only votes on the top three candidates, so your left-wing opponent Bernie will be left out. This means virtually all Democrats will vote for you, and the Republican vote very well might be split between Rubio and Trump.<p><p>Unfortunately, you didn’t make the top 2, so you’re going to be saddled with a right-wing vice president until 2020.<p><p> You’ll hopefully be able to use your years in government to forge a bipartisan few years in Congress until a hopefully favourable midterm happens. Get ready to move back into the white house, Madame President!";
+            }
+        } else {
+            if (vptoptwo == true) {
+                if (orderID[3] == 202) {
+                    return "<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. you have made the top three, but so has Sanders. The house is already not favourable to you, and with a second left-wing candidate available, it’s all but confirmed you’ll not be elevated, and Rubio will. Your running mate will also similarly be passed over for Rubio’s mate.<p><p> Let’s hope Rubio and a republican congress can expand on Obama’s economy and prevent more terrorist attacks. As for you, it seems your long and often controversial political career will come to an end.";
+                } else {
+                    return "<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. you have made the top three, but so has Sanders. The house is already not favourable to you, and with a second left-wing candidate available, it’s looking grim. Your only respite is the fact that many house Republicans might be wary of Donald Trump, but that wariness is unlikely to matter enough to give you the votes you need. Your running mate is also in a similar position, but the odds are more in their favour.<p><p> Regardless, if Trump gets elevated to the presidency, let’s hope he can do many of the things you yourself wanted to do, like renegotiate or ending the TPP, and work on infrastructure improvements. As for you, it seems your long and often controversial political career will come to an end.";
+                }
+            } else 
+            if (orderID[3] == 202) {
+                return "<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. you have made the top three, but so has Sanders. The house is already not favourable to you, and with a second left-wing candidate available, it’s all but confirmed you’ll not be elevated, and Rubio will. Your running mate is out of contention, also, as you didn’t make the top two.<p><p> Let’s hope Rubio and a Republican congress can expand on Obama’s economy and prevent more terrorist attacks. As for you, it seems your long and often controversial political career will come to an end.";
+            } else {
+                return "<h3>“Sorry, you’re on track to lose the 2016 election.”</h3><p>The election is going to the house of representatives. you have made the top three, but so has Sanders. The house is already not favourable to you, and with a second left-wing candidate available, it’s looking grim. Your only respite is the fact that many house Republicans might be wary of Donald Trump, but that wariness is unlikely to matter enough to give you the votes you need. Your running mate is fully out of contention, due to you missing the top two.<p><p> Regardless, if Trump gets elevated to the presidency, let’s hope he can do many of the things you yourself wanted to do, like renegotiate or end the TPP, and work on infrastructure improvements. As for you, it seems your long and often controversial political career will come to an end.";
+            }
+        }
+    }
+   else {
+    return "<h3>damn.</h3><p>L."
+    }
+}
+
